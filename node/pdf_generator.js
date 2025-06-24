@@ -9,7 +9,7 @@ export default async function generatePDF(data) {
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
   // Fetch and embed the image
-  const imageUrl = 'https://images.unsplash.com/photo-1581091012184-d8b07bff4d79?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80';
+  const imageUrl = 'https://raw.githubusercontent.com/cybercoded/publication_projects/refs/heads/main/img_header.jpg';
   const imageBytes = await fetch(imageUrl).then(res => res.arrayBuffer());
   const embeddedImage = await pdfDoc.embedJpg(imageBytes);
   const scaledImage = embeddedImage.scale(0.25);
