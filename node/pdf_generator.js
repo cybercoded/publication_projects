@@ -10,7 +10,7 @@ export default async function generatePDF(data) {
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
   // Load PNG image from external link (letterhead-style)
-  const imageUrl = 'https://raw.githubusercontent.com/cybercoded/publication_projects/refs/heads/main/img_header.jpg';
+  const imageUrl = 'https://raw.githubusercontent.com/cybercoded/publication_projects/refs/heads/main/node/img_header.jpg';
   const imageBytes = await fetch(imageUrl).then(res => res.arrayBuffer());
   const embeddedImage = await pdfDoc.embedJpg(imageBytes);
 
